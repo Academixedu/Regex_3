@@ -1,6 +1,19 @@
-public class Reg3{
-// Validate a Positive Integer
-// Problem: Create a regex to match strings that represent a positive integer.
-// Example Input: "123", "007", "0", "-123"
-// Expected Matches: "123", "007"
+public class Reg3 {
+    public static void main(String[] args) {
+        String[] testCases = {"123", "007", "0", "-123"};
+
+        for (String testCase : testCases) {
+            if (isValidPositiveInteger(testCase)) {
+                System.out.println(testCase + " Valid");
+            } else {
+                System.out.println(testCase + "NOT valid");
+            }
+        }
+    }
+
+    public static boolean isValidPositiveInteger(String input) {
+
+        String regex = "^[1-9]\\d*$";
+        return input.matches(regex);
+    }
 }
