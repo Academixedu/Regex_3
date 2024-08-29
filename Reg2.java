@@ -15,11 +15,8 @@ public class Reg2{
 
         Matcher m = p.matcher(word);
         
-        if (m.find()) {
+        while (m.find()) {
             System.out.println("Repeated word: " + m.group(1));
-        }
-        else{
-            System.out.println("not repeated");
         }
     }
 
